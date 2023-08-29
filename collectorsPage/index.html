@@ -92,16 +92,16 @@
 					<!-- Gallery  -->
 						<div class="gallery">
 							<article class="from-left">
-								<a href="images/fulls/01.jpg" class="image" onclick="clickInfoImage()"><img src="images/thumbs/01.jpg" title="Main Feed" alt="" /></a>
+								<a href="images/fulls/01.jpg" class="image"><img src="images/thumbs/01.jpg" title="Main Feed" alt="" /></a>
 							</article>
 							<article class="from-right">
-								<a href="images/fulls/02.jpg" class="image" onclick="clickInfoImage()"><img src="images/thumbs/02.jpg" title="Collectors Room" alt="" /></a>
+								<a href="images/fulls/02.jpg" class="image"><img src="images/thumbs/02.jpg" title="Collectors Room" alt="" /></a>
 							</article>
 							<article class="from-left">
-								<a href="images/fulls/03.jpg" class="image" onclick="clickInfoImage()"><img src="images/thumbs/03.jpg" title="Alburm" alt="" /></a>
+								<a href="images/fulls/03.jpg" class="image"><img src="images/thumbs/03.jpg" title="Alburm" alt="" /></a>
 							</article>
 							<article class="from-right">
-								<a href="images/fulls/04.jpg" class="image" onclick="clickInfoImage()"><img src="images/thumbs/04.jpg" title="Template" alt="" /></a>
+								<a href="images/fulls/04.jpg" class="image"><img src="images/thumbs/04.jpg" title="Template" alt="" /></a>
 							</article>
 <!--							<article class="from-left">
 								<a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a>
@@ -188,19 +188,15 @@
 			<script src="assets/js/main.js"></script>
 
 	<!-- Scripts -->
-	<script>
-			function clickInfoImage() {
-				var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
-				if(isMobile == true){
-					alert ("모바일 환경에서는 설명 사진의 크기가 작으니 pc를 이용해 주세요");
-  				}
-			}
-	</script>
 
-
-	<!-- feed 백 작성 완료 후 alert -->
 	<script>
 			$(document).ready(function(){
+				var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+					if(isMobile == true){
+						alert ("콜렉터즈 페이지는 PC버전 크롬 브라우저에 최적화되어 있습니다. PC버전 크롬 브라우저로 접속하기를 권장합니다.");
+					}
+
+					<!-- feed 백 작성 완료 후 alert -->
 				$(".gform").submit(function(){
 					alert("Collectors 를 위한 의견을 주셔서 감사합니다.");
 				});
