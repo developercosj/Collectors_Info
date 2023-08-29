@@ -92,16 +92,16 @@
 					<!-- Gallery  -->
 						<div class="gallery">
 							<article class="from-left">
-								<a href="images/fulls/01.jpg" class="image" ><img src="images/thumbs/01.jpg" title="Main Feed" alt="" /></a>
+								<a href="images/fulls/01.jpg" class="image" onclick="clickInfoImage()"><img src="images/thumbs/01.jpg" title="Main Feed" alt="" /></a>
 							</article>
 							<article class="from-right">
-								<a href="images/fulls/02.jpg" class="image"><img src="images/thumbs/02.jpg" title="Collectors Room" alt="" /></a>
+								<a href="images/fulls/02.jpg" class="image" onclick="clickInfoImage()"><img src="images/thumbs/02.jpg" title="Collectors Room" alt="" /></a>
 							</article>
 							<article class="from-left">
-								<a href="images/fulls/03.jpg" class="image"><img src="images/thumbs/03.jpg" title="Alburm" alt="" /></a>
+								<a href="images/fulls/03.jpg" class="image" onclick="clickInfoImage()"><img src="images/thumbs/03.jpg" title="Alburm" alt="" /></a>
 							</article>
 							<article class="from-right">
-								<a href="images/fulls/04.jpg" class="image"><img src="images/thumbs/04.jpg" title="Template" alt="" /></a>
+								<a href="images/fulls/04.jpg" class="image" onclick="clickInfoImage()"><img src="images/thumbs/04.jpg" title="Template" alt="" /></a>
 							</article>
 <!--							<article class="from-left">
 								<a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a>
@@ -129,6 +129,7 @@
 								<div class="field half"><input type="text" name="age" placeholder="나이 (숫자만)" /></div>
 								<div class="field half"><input type="text" name="gender" placeholder="성별 (남/여)" /></div>
 								<div class="field half"><input type="text" name="gender" placeholder="SNS 사용경험 (있음/없음)" /></div>
+								<div class="field half"><input type="text" name="gender" placeholder="IOS 버전 (설정 -> 일반 -> 정보 -> ios 버전)" /></div>
 								<div class="field"><textarea name="message" placeholder="Message" rows="6">
 1. 가장 마음에 드는 점을 적어주세요:
 2. 가장 보충했으면 좋을 것 같은 점을 적어주세요 :
@@ -187,6 +188,17 @@
 			<script src="assets/js/main.js"></script>
 
 	<!-- Scripts -->
+	<script>
+			function clickInfoImage() {
+				var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+				if(isMobile == true){
+					alert ("모바일 환경에서는 설명 사진의 크기가 작으니 pc를 이용해 주세요");
+  				}
+			}
+	</script>
+
+
+	<!-- feed 백 작성 완료 후 alert -->
 	<script>
 			$(document).ready(function(){
 				$(".gform").submit(function(){
